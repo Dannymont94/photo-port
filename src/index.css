@@ -131,7 +131,16 @@ form {
   width: 40%;
 }
 
+form div {
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+}
+
 input {
+  width: 300px;
   font-size: 1rem;
   padding: 0.25rem;
   border: 1px solid var(--dark);
