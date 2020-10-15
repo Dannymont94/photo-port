@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="modalBackdrop"
+  >
+    <div
+      class="modalContainer"
+    >
+      <div
+        class="flex-row space-between"
+      >
+        <h3
+          class="modalTitle"
+        >
+          Grocery aisle
+        </h3>
+        <button
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+      <img
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie"
+        src="1.jpg"
+      />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
