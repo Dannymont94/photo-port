@@ -5,21 +5,23 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+
   const [categories] = useState([
     {
       name: 'commercial',
       description: 'Photos of grocery stores, food trucks, and other commercial projects',
     },
-    { 
-      name: 'portraits', 
+    {
+      name: 'portraits',
       description: 'Portraits of people in my life'
     },
-    { 
+    {
       name: 'food',
-      description: 'Delicious delicacies' 
+      description: 'Delicious delicacies'
     },
-    { 
-      name: 'landscape', 
+    {
+      name: 'landscape',
       description: 'Fields, farmhouses, waterfalls, and the beauty of nature'
     }
   ]);
@@ -28,11 +30,22 @@ function App() {
 
   return (
     <div>
-      <Nav categories={categories} setCurrentCategory={setCurrentCategory} currentCategory={currentCategory}></Nav>
+      <Nav
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
       <main>
-        <Contact></Contact>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+            <Contact></Contact>
+          )}
       </main>
     </div>
   );
