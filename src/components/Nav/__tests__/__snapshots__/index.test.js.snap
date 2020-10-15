@@ -34,7 +34,7 @@ exports[`Nav component matches snapshot DOM node structure 1`] = `
           </a>
         </li>
         <li
-          class="mx-1"
+          class="mx-1 navActive"
         >
           <span>
             Contact
